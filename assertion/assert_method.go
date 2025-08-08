@@ -23,3 +23,9 @@ func (a *Assert) IsNotNil(object interface{}, message string) {
 		a.t.Errorf("Expected object to be not nil, but it was nil. %s", message)
 	}
 }
+
+func (a *Assert) NotEmpty(s string, message string) {
+	if s == "" {
+		a.t.Errorf("Expected string to be not empty, but it was empty. %s", message)
+	}
+}
